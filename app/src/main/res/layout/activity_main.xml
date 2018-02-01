@@ -28,16 +28,19 @@
         android:layout_height="wrap_content"
         android:text="@string/swipe_tabs" />
 
+    <!-- The below button creates background ripples in onTouch event-->
     <Button
         android:id="@+id/btn_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         android:text="@string/recycler_view" />
-
+    <!-- The below button creates background border and ripples in onTouch event-->
     <Button
         android:id="@+id/btn_retrofit_api_call"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
         android:text="@string/retrofit" />
 
 </LinearLayout>

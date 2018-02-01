@@ -1,5 +1,6 @@
 package myportfolio.com.tabswithswipekotlin
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val btnSwipeTabs = findViewById(R.id.btn_swipe_tabs) as Button*/
 
         btn_swipe_tabs.setOnClickListener {
-            startActivity(Intent(this, SwipeTabsActivity::class.java))
+            startActivity(Intent(this, SwipeTabsActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
         }
         btn_recycler_view.setOnClickListener {
             startActivity(Intent(this, RecyclerActivity::class.java))
