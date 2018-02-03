@@ -12,9 +12,11 @@
 
         <!-- specify shared element transitions -->
         <item name="android:windowSharedElementEnterTransition">
-            @transition/change_image_transform</item>
+            @transition/change_image_transform
+        </item>
         <item name="android:windowSharedElementExitTransition">
-            @transition/change_image_transform</item>
+            @transition/change_image_transform
+        </item>
 
     </style>
 
@@ -29,7 +31,7 @@
     <style name="CardViewStyle" parent="CardView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="cardCornerRadius">5dp</item>
+        <item name="cardCornerRadius">@dimen/dimen_5dp</item>
         <item name="cardElevation">4dp</item>
         <item name="cardPreventCornerOverlap">true</item>
         <item name="cardUseCompatPadding">true</item>
