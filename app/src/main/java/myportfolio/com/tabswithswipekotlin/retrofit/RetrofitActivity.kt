@@ -36,7 +36,7 @@ class RetrofitActivity : AppCompatActivity() {
         call.enqueue(object : Callback<MoviesResponse> {
             override fun onResponse(call: retrofit2.Call<MoviesResponse>, response: retrofit2.Response<MoviesResponse>) {
                 try {
-                    val statusCode = response.code()
+
                     val movies = response.body().results
                     movies_recycler_view.adapter = (MoviesAdapter(movies))
                 } catch (e: Exception) {

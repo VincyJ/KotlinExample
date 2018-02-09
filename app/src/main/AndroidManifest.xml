@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".swipetabs.SwipeTabsActivity" />
         <activity android:name=".recyclerview.RecyclerActivity" />
-        <activity android:name=".retrofit.RetrofitActivity"></activity>
+        <activity android:name=".retrofit.RetrofitActivity" />
+        <activity android:name=".bottomnavigation.BottomNavigationActivity"></activity>
     </application>
 
 </manifest>

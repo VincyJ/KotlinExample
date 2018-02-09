@@ -7,7 +7,8 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.MenuItem
-import myportfolio.com.tabswithswipekotlin.*
+import myportfolio.com.tabswithswipekotlin.MainActivity
+import myportfolio.com.tabswithswipekotlin.R
 import myportfolio.com.tabswithswipekotlin.swipetabs.adapter.ViewPagerAdapter
 import myportfolio.com.tabswithswipekotlin.swipetabs.fragment.OneFragment
 import myportfolio.com.tabswithswipekotlin.swipetabs.fragment.ThreeFragment
@@ -30,7 +31,7 @@ class SwipeTabsActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         viewPager = findViewById<ViewPager>(R.id.viewpager)
-        setUpViewPager(viewPager as ViewPager)
+        setUpViewPager()
 
         tabLayout = findViewById<TabLayout>(R.id.tabs)
         (tabLayout as TabLayout).setupWithViewPager(viewPager)
@@ -44,7 +45,7 @@ class SwipeTabsActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun setUpViewPager(ViewPager: ViewPager) {
+    private fun setUpViewPager() {
 
         mAdapter = ViewPagerAdapter(getSupportFragmentManager())
         (mAdapter as ViewPagerAdapter).addFragment(OneFragment(), "ONE")

@@ -36,6 +36,7 @@
         android:background="?android:attr/selectableItemBackgroundBorderless"
         android:elevation="@dimen/dimen_2dp"
         android:text="@string/recycler_view" />
+
     <!-- The below button creates background border and ripples in onTouch event-->
     <Button
         android:id="@+id/btn_retrofit_api_call"
@@ -43,5 +44,13 @@
         android:layout_height="wrap_content"
         android:background="?android:attr/selectableItemBackground"
         android:text="@string/retrofit" />
+
+    <!-- The below button creates background border and ripples in onTouch event-->
+    <Button
+        android:id="@+id/btn_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/bottom_navigation" />
 
 </LinearLayout>

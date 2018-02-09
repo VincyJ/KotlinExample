@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import myportfolio.com.tabswithswipekotlin.bottomnavigation.BottomNavigationActivity
 import myportfolio.com.tabswithswipekotlin.recyclerview.RecyclerActivity
 import myportfolio.com.tabswithswipekotlin.retrofit.RetrofitActivity
 import myportfolio.com.tabswithswipekotlin.swipetabs.SwipeTabsActivity
@@ -32,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_retrofit_api_call.setOnClickListener {
             startActivity(Intent(this, RetrofitActivity::class.java))
+        }
+        btn_bottom_navigation.setOnClickListener {
+            startActivity(Intent(this, BottomNavigationActivity::class.java))
         }
     }
 
