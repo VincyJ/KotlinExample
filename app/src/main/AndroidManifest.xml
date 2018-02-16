@@ -3,6 +3,7 @@
     package="myportfolio.com.tabswithswipekotlin">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,11 +18,77 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="deeplink.practice"
+                    android:path="/mainopen"
+                    android:scheme="https" />
+
+            </intent-filter>
+
         </activity>
-        <activity android:name=".swipetabs.SwipeTabsActivity" />
-        <activity android:name=".recyclerview.RecyclerActivity" />
-        <activity android:name=".retrofit.RetrofitActivity" />
-        <activity android:name=".bottomnavigation.BottomNavigationActivity"></activity>
+        <activity android:name=".swipetabs.SwipeTabsActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="deeplink.practice"
+                    android:path="/swipetabs"
+                    android:scheme="https" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".recyclerview.RecyclerActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="deeplink.practice"
+                    android:path="/recyclerview"
+                    android:scheme="https" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".retrofit.RetrofitActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="deeplink.practice"
+                    android:path="/retrofit"
+                    android:scheme="https" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".bottomnavigation.BottomNavigationActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="deeplink.practice"
+                    android:path="/bottomnavigation"
+                    android:scheme="https" />
+
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
